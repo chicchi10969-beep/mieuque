@@ -1478,6 +1478,25 @@ details.more.symall > summary{display:none !important}
 }
 .wgrid > i{height:1px !important;width:100%}
 @media (max-width:760px){.wgrid{gap:36px !important}}
+/* 3 therapists stacked vertically (2026-10-27) */
+.team .tgrid{grid-template-columns:minmax(0,1fr) !important;max-width:860px;margin-left:auto !important;margin-right:auto !important;gap:clamp(16px,2.4vw,28px) !important}
+.team .tcard{display:grid !important;grid-template-columns:minmax(0,300px) minmax(0,1fr);align-items:center}
+.team .tph{margin:16px 0 16px 16px !important;aspect-ratio:3/4}
+.team .tbd{padding:20px clamp(16px,3vw,40px) !important}
+.team .tcv,.team .tname,.team .tline,.team .tkey{min-height:0 !important}
+@media (max-width:760px){
+ .team .tcard{grid-template-columns:40% minmax(0,1fr)}
+ .team .tph{margin:8px 0 8px 8px !important;aspect-ratio:2/3}
+ .team .tbd{padding:10px 10px 10px 12px !important}
+ .team .tcv{display:block !important;font-size:10.5px !important;line-height:1.6 !important;margin-top:4px !important}
+ .team .tcv li{display:list-item !important}
+ .team .tkey{min-height:0 !important;font-size:14px !important}
+ .team .tname b{font-size:17px !important}
+ .team .tline{font-size:11.5px !important}
+ .team .tlpc{display:inline !important}
+ .team .tline br{display:none}
+ .team .tstat li{flex-direction:row !important;justify-content:space-between;align-items:center}
+}
 </style>
 </head>
 <body>
