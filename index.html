@@ -1788,7 +1788,7 @@ details.more.symall > summary{display:none !important}
         <table class="ptbl">
           <tr><th>初回（カウンセリング込み）</th><td>8,000円</td></tr>
           <tr><th>2回目以降（都度払い）</th><td>12,000円</td></tr>
-          <tr><th>3ヶ月のサブスク（入会金）<small>3ヶ月間、何度来ても1回6,000円になります。</small><small>例：8/15入会 → 11/14まで</small></th><td>30,000円</td></tr>
+          <tr><th>3ヶ月のサブスク（入会金）<small>3ヶ月間、何度来ても1回6,000円になります。</small><small>例：<span id="subex">10/28入会 → 1/27まで</span></small></th><td>30,000円</td></tr>
           <tr><th>サブスク期間中の施術（1回）</th><td>6,000円</td></tr>
         </table>
         <p class="psubn"><span>※ 料金は全て税込です。</span><span>※ 3ヶ月の間に5回以上来られるのであれば、お得になります。</span><span>※ 身体も心も思考も、たった1回で変わるものではなく、回数を重ねて変化に慣れさせることが大切なので、通院ペースは「月2〜4回ペース」、重度な方は「週2回ペース」が多いです。</span><span>※ 基本的にはこの3ヶ月でご卒業をしていただくイメージで考えております。</span></p>
@@ -2189,5 +2189,6 @@ var t=b.textContent;b.textContent='';b.classList.add('js');
 Array.from(t).forEach(function(c,i){var s=document.createElement('i');s.className='nsch';s.setAttribute('aria-hidden','true');s.textContent=c;s.style.transitionDelay=(i*0.09)+'s';b.appendChild(s)});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){b.classList.add('in');io.disconnect();setTimeout(function(){b.classList.add('done')},t.length*90+1300)}})},{threshold:.4});io.observe(b);})();
 </script>
+<script>(function(){try{var el=document.getElementById('subex');if(!el)return;var d=new Date();var e=new Date(d.getFullYear(),d.getMonth()+3,d.getDate());if(e.getDate()!==d.getDate()){e=new Date(d.getFullYear(),d.getMonth()+4,0);}else{e.setDate(e.getDate()-1);}el.textContent=(d.getMonth()+1)+'/'+d.getDate()+'入会 → '+(e.getMonth()+1)+'/'+e.getDate()+'まで';}catch(_){}})();</script>
 </body>
 </html>
