@@ -2116,7 +2116,7 @@ window.addEventListener('scroll',u,{passive:true});u();
 t.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});})();
 (function(){var sh=document.getElementById('lsheet');if(!sh)return;var tx=document.getElementById('lstx'),ok=sh.querySelector('.lsok'),k='p';
 var T={p:'【ご予約希望】人の整体\nお名前：\nご希望の日時（第1〜第3希望）：\n気になるところ：\nはじめて／2回目以降：',
-d:'【ご予約希望】わんちゃんの整体\n飼い主さまのお名前：\nわんちゃんの名前：\n犬種・年齢：\nご希望の場所：守口院近くの施術スペース／出張（住所：　　）\nご希望の日時（第1〜第3希望）：\n気になる様子：'};
+d:'【ご予約希望】わんちゃんの整体\n飼い主さまのお名前：\nわんちゃんの名前：\n犬種・年齢：\nご希望の場所：守口院近くの施術スペース／出張（住所：　　）\nご希望の曜日：\nご希望の時間帯：\n気になる様子：\n備考（お伝えしたいことがあれば、ひと言どうぞ）：'};
 function setk(x){k=x;tx.value=T[x];sh.querySelectorAll('.lstab button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-k')===x);});ok.textContent='';}
 function open(e,x){e.preventDefault();setk(x||'p');sh.hidden=false;document.body.style.overflow='hidden';}
 function close(){sh.hidden=true;document.body.style.overflow='';}
