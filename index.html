@@ -1600,6 +1600,11 @@ details.more.symall > summary{display:none !important}
 .tflyer{display:none}
 html.tfon .tflyer{display:block}
 html.tfon .flyimg{display:none}
+dd.svc{display:grid !important;grid-template-columns:max-content auto minmax(0,1fr);column-gap:.5em;row-gap:2px;align-items:baseline;line-height:1.75}
+.svc .sv{display:contents}
+.svc .sv b{font-weight:700;color:#2A231C;white-space:nowrap}
+.svc .sv i{font-style:normal;color:#A9884A;font-weight:700}
+@media (max-width:760px){dd.svc{font-size:.92em;column-gap:.35em}}
 </style>
 </head>
 <body>
@@ -2118,7 +2123,7 @@ html.tfon .flyimg{display:none}
         <dl>
           <dt>住所</dt><dd>〒570-0066<br>大阪府守口市梅園町2-4<br>梅園テラスハウス303号室</dd>
           <dt>電話</dt><dd><a href="tel:07084150910">070-8415-0910</a></dd>
-          <dt>施術</dt><dd>人の整体／<span class="nw">わんちゃん整体</span><small class="sdnote">（サロン近隣に施術スペースあり）</small></dd>
+          <dt>施術</dt><dd class="svc"><span class="sv"><b>人の整体</b><i>→</i><span>サロンにて</span></span><span class="sv"><b>わんちゃん整体</b><i>→</i><span>サロン近隣の施術スペース</span></span></dd>
           <dt>営業時間</dt><dd>10:00〜20:00</dd>
           <dt>定休日</dt><dd>不定休</dd>
         </dl>
@@ -2130,7 +2135,7 @@ html.tfon .flyimg{display:none}
         <dl>
           <dt>住所</dt><dd>〒673-0012<br>兵庫県明石市和坂14-6<br>ステラ21 202号室</dd>
           <dt>電話</dt><dd><a href="tel:07084150910">070-8415-0910</a></dd>
-          <dt>施術</dt><dd>人の整体／<span class="nw">わんちゃん整体</span><small class="sdnote">（出張のみ）</small></dd>
+          <dt>施術</dt><dd class="svc"><span class="sv"><b>人の整体</b><i>→</i><span>サロンにて</span></span><span class="sv"><b>わんちゃん整体</b><i>→</i><span>出張のみ</span></span></dd>
           <dt>営業時間</dt><dd>10:00〜20:00</dd>
           <dt>定休日</dt><dd>不定休</dd>
         </dl>
