@@ -1472,6 +1472,17 @@ details.more.symall > summary{display:none !important}
 #ns-h .nwh{display:inline-block;white-space:nowrap}
 .ppd .nw{white-space:nowrap;display:inline-block}
 .tstat li>span{white-space:nowrap}
+@media (max-width:760px){.stage .ctrl{bottom:9px !important;min-height:32px !important;padding:6px 14px !important}}
+@media (max-width:760px){
+ .team .tline{display:block !important;font-size:10.5px !important;line-height:1.6 !important;margin-top:6px !important;letter-spacing:0 !important;color:#3A322B}
+ .team .tline br{display:none}.team .tlpc{display:none}
+ .team .tph{margin-bottom:0}
+ .team .tbd{padding:9px 5px 8px !important}
+ .team .tkey::after{margin-top:4px !important}
+ .team .tname{margin-top:6px !important}
+ .team .tstat{padding-top:6px !important;margin-top:7px !important}
+ .team .kids2{margin-top:5px !important}
+}
 </style>
 </head>
 <body>
@@ -1599,7 +1610,7 @@ details.more.symall > summary{display:none !important}
           <p class="tkey">柔道整復師<span class="tx"> × </span>犬の整体師</p>
           <ul class="tcv"><li>国家資格 柔道整復師<small>（人の身体の国家資格）</small></li><li>ナチュラリゼーション認定トレーナー</li><li>ニューロンメディカルセラピスト</li></ul>
           <p class="tname"><b>竹元 晃嗣</b><small>たけもと こうすけ</small></p>
-          <p class="tline">研ぎ澄まされた、繊細な手技と見る目。<br>人の身体のプロが、<br>わんちゃんの身体まで診ます。</p>
+          <p class="tline">研ぎ澄まされた、繊細な手技と見る目。<span class="tlpc"><br>人の身体のプロが、<br>わんちゃんの身体まで診ます。</span></p>
           <ul class="tstat"><li><span>わんちゃん整体<img class="tlu" data-lulu alt=""></span><em class="ok">受付中</em></li><li><span>人の整体</span><em class="ref">ご紹介のみ</em></li></ul>
         </div>
       </article>
@@ -2177,6 +2188,13 @@ function fit(){
     st.style.setProperty('--u',Math.max(u,umin)+'px');break;
   }
 }
+var fit0=fit;fit=function(){var fl=st.querySelector('.floor');st.style.removeProperty('height');st.style.removeProperty('--lift');if(fl){fl.style.removeProperty('background-size');}
+ fit0();
+ if(window.innerWidth>760||!fl)return;
+ var sr=st.getBoundingClientRect(),fr=fl.getBoundingClientRect(),top=fr.top-sr.top,row=fr.height/4,F=Math.round(row*2),H2=Math.round(top+F),lift=F-0.16*H2;
+ fl.style.setProperty('background-size','auto '+(row*4)+'px','important');fl.style.setProperty('background-position','left top','important');
+ st.style.setProperty('min-height',H2+'px','important');st.style.setProperty('height',H2+'px','important');st.style.setProperty('--lift',lift+'px');
+};
 var t;function later(){clearTimeout(t);t=setTimeout(fit,60);}
 window.addEventListener('resize',later);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
@@ -2219,7 +2237,7 @@ var SKIP='.stage,.hd,.nsbig,.nsplate,.topcopy,script,style,svg,button,.nw,.nw2,.
 var END=/[、。！？」）・…]$|^(を|が|は|に|で|と|も|へ|や|か|の|て|して|から|まで|より|には|では|とも|にも|ても|ので|けど|など|として|について|ながら|ように)$/;
 var NOSTART=/^[、。！？」）ーっゃゅょァィゥェォッャュョ・…らりるれろんずぬ]/;
 var HIRA=/[぀-ゟ]$/,KATA=/[゠-ヿ]$/,KANJI0=/^[一-鿿]/,KK0=/^[一-鿿゠-ヿ「（]/;
-function good(a,b){if(NOSTART.test(b))return 0;if(END.test(a))return 2;if(HIRA.test(a)&&KK0.test(b))return 2;if(/^[おご][一-鿿]/.test(b))return 2;if(KATA.test(a)&&KANJI0.test(b))return 2;if(HIRA.test(a)&&/^[぀-ゟ]/.test(b))return /^(よう|こと|もの|ところ|すぐ|まで|ため)/.test(b)?1:0;if(/[぀-ヿ一-鿿]$/.test(a)&&/^[぀-ヿ一-鿿]/.test(b))return 1;return 0;}
+function good(a,b){if(NOSTART.test(b))return 0;if(/(^|[^ぁ-ゟ])[おご]$|^[おご]$/.test(a)&&/^[一-鿿]/.test(b))return 0;if(END.test(a))return 2;if(HIRA.test(a)&&KK0.test(b))return 2;if(/^[おご][一-鿿]/.test(b))return 2;if(KATA.test(a)&&KANJI0.test(b))return 2;if(HIRA.test(a)&&/^[぀-ゟ]/.test(b))return /^(よう|こと|もの|ところ|すぐ|まで|ため)/.test(b)?1:0;if(/[぀-ヿ一-鿿]$/.test(a)&&/^[぀-ヿ一-鿿]/.test(b))return 1;return 0;}
 function proc(tn){var t=tn.nodeValue;if(!t||t.length<3||!/[぀-ヿ一-鿿]/.test(t))return;
  var parts=[];for(var s of seg.segment(t))parts.push(s.segment);
  var cuts=[],idx=0;
