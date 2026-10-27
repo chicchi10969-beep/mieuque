@@ -1497,6 +1497,56 @@ details.more.symall > summary{display:none !important}
  .team .tline br{display:none}
  .team .tstat li{flex-direction:row !important;justify-content:space-between;align-items:center}
 }
+.subcmp{margin:22px 0 0;padding:18px 18px 14px;border:1px solid #E2D3B3;border-radius:8px;background:linear-gradient(180deg,#FFFDF8,#FBF6EC)}
+.subcmp .scttl{margin:0 0 10px;font-family:var(--mincho);font-weight:700;font-size:16px;color:#2A231C;letter-spacing:.04em}
+.subcmp .scttl small{display:inline-block;margin-left:6px;font-family:var(--body);font-weight:500;font-size:11.5px;color:#7A6A55;letter-spacing:0}
+.subcmp table{width:100%;border-collapse:collapse;table-layout:fixed;font-variant-numeric:tabular-nums}
+.subcmp th,.subcmp td{padding:10px 8px;border-bottom:1px solid #EADFC9;text-align:right;vertical-align:middle}
+.subcmp th:first-child,.subcmp td:first-child{text-align:left;width:22%}
+.subcmp th{font-size:12.5px;font-weight:700;color:#3A2E22;line-height:1.4}
+.subcmp th small{display:block;font-size:10.5px;font-weight:500;color:#7A6A55;margin-top:2px}
+.subcmp td{font-size:15px;font-weight:600;color:#3A322B}
+.subcmp td:first-child{font-weight:700;font-size:16px}
+.subcmp .sub{background:rgba(217,191,130,.16)}
+.subcmp th.sub{color:#7A5A1E}
+.subcmp td.sub{color:#2A231C;font-weight:700}
+.subcmp td em{display:block;font-style:normal;margin-top:3px;font-size:11.5px;font-weight:700;color:#fff;background:linear-gradient(135deg,#A9884A,#C9A86A);border-radius:999px;padding:2px 9px;width:max-content;margin-left:auto}
+.subcmp td em.eq{background:#E9E1D0;color:#6A5A44}
+.subcmp tr.best td{border-bottom:0}
+.subcmp tr.best td.sub{background:rgba(217,191,130,.30)}
+.subcmp .scnote{margin:10px 0 0;font-size:11.5px;color:#7A6A55;line-height:1.8}
+@media (max-width:760px){
+ .subcmp{padding:14px 10px 10px}
+ .subcmp .scttl{font-size:14.5px}.subcmp .scttl small{display:block;margin:2px 0 0}
+ .subcmp th,.subcmp td{padding:9px 5px}
+ .subcmp th{font-size:11px}.subcmp th small{font-size:9.5px}
+ .subcmp td{font-size:13.5px}.subcmp td:first-child{font-size:14px}
+ .subcmp td em{font-size:10px;padding:2px 7px}
+}
+.subbox{margin:26px 0 0;padding:22px 20px 16px;border:1px solid #D9C69A;border-radius:10px;background:#FFFDF8;box-shadow:0 8px 22px rgba(70,50,20,.06)}
+.subbox .sbh{margin:0 0 8px;font-family:var(--mincho);font-weight:700;font-size:20px;color:#2A231C;letter-spacing:.06em}
+.subbox .sbh small{display:block;font-family:var(--body);font-size:11.5px;font-weight:600;color:#8C6D2C;letter-spacing:.12em;margin-bottom:2px}
+.subbox .sblead{margin:0 0 14px;font-size:14px;line-height:1.85;color:#3A322B}
+.subbox .sblead b{color:#7A5A1E;background:linear-gradient(transparent 62%,rgba(217,191,130,.45) 62%)}
+.sbsteps{list-style:none;margin:0 0 4px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sbsteps li{background:#F8F1E2;border:1px solid #EADFC9;border-radius:8px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.sbsteps li span{font-size:11px;color:#7A6A55;font-weight:600}
+.sbsteps li b{font-size:17px;color:#2A231C;font-weight:700;line-height:1.3}
+.sbsteps li b.sbdate{font-size:13px}
+.sbsteps li small{font-size:10.5px;color:#7A6A55}
+.subbox .subcmp{margin-top:14px}
+.subcmp .scpoint{margin:12px 0 0;padding:10px 12px;border-radius:8px;background:#fff;border:1px dashed #D9C69A;font-size:13.5px;line-height:1.8;color:#3A322B;text-align:center}
+.subcmp .scpoint b{color:#7A5A1E}
+.subbox .sbnote{margin-top:12px}
+@media (max-width:760px){
+ .subbox{padding:16px 12px 12px}
+ .subbox .sbh{font-size:18px}
+ .subbox .sblead{font-size:13px}
+ .sbsteps{gap:5px}.sbsteps li{padding:8px 4px}
+ .sbsteps li b{font-size:14px}.sbsteps li b.sbdate{font-size:11.5px}
+ .sbsteps li span,.sbsteps li small{font-size:9.5px}
+ .subcmp .scpoint{font-size:12.5px}
+}
 </style>
 </head>
 <body>
@@ -1834,10 +1884,30 @@ details.more.symall > summary{display:none !important}
         <table class="ptbl">
           <tr><th>初回（カウンセリング込み）</th><td>8,000円</td></tr>
           <tr><th>2回目以降（都度払い）</th><td>12,000円</td></tr>
-          <tr><th>3ヶ月のサブスク（入会金）<small>3ヶ月間、何度来ても1回6,000円になります。</small><small>例：<span id="subex">10/28入会 → 1/27まで</span></small></th><td>30,000円</td></tr>
-          <tr><th>サブスク期間中の施術（1回）</th><td>6,000円</td></tr>
         </table>
-        <p class="psubn"><span>※ 料金は全て税込です。</span><span>※ 3ヶ月の間に5回以上来られるのであれば、お得になります。</span><span>※ 身体も心も思考も、たった1回で変わるものではなく、回数を重ねて変化に慣れさせることが大切なので、通院ペースは「月2〜4回ペース」、重度な方は「週2回ペース」が多いです。</span><span>※ 基本的にはこの3ヶ月でご卒業をしていただくイメージで考えております。</span></p>
+        <p class="psubn"><span>※ 料金は全て税込です。</span></p>
+        <div class="subbox">
+          <p class="sbh"><small>人の整体</small>3ヶ月のサブスク</p>
+          <p class="sblead">3ヶ月のあいだ、<b>何度来ても1回6,000円</b>になるプランです。<br>2回目以降の都度払い（12,000円）の半額で受けていただけます。</p>
+          <ol class="sbsteps">
+            <li><span>入会金</span><b>30,000円</b><small>はじめに1回だけ</small></li>
+            <li><span>3ヶ月間の施術</span><b>1回 6,000円</b><small>何度来ても同じ</small></li>
+            <li><span>期間の例</span><b class="sbdate"><span id="subex">10/28入会 → 1/27まで</span></b><small>入会日から3ヶ月</small></li>
+          </ol>
+          <div class="subcmp">
+            <p class="scttl">通う回数でくらべると<small>（3ヶ月間・2回目以降の方の場合）</small></p>
+            <table>
+              <thead><tr><th>3ヶ月で<br>通う回数</th><th>都度払い<small>1回 12,000円</small></th><th class="sub">3ヶ月のサブスク<small>入会金＋1回6,000円</small></th></tr></thead>
+              <tbody>
+                <tr><td>5回</td><td>60,000円</td><td class="sub">60,000円<em class="eq">同じ</em></td></tr>
+                <tr><td>6回</td><td>72,000円</td><td class="sub">66,000円<em>6,000円お得</em></td></tr>
+                <tr class="best"><td>8回</td><td>96,000円</td><td class="sub">78,000円<em>18,000円お得</em></td></tr>
+              </tbody>
+            </table>
+            <p class="scpoint">3ヶ月で<b>5回</b>なら、都度払いと同じ金額。<br><b>6回目から</b>は、通うほどお得になります。</p>
+          </div>
+          <p class="psubn sbnote"><span>※ 身体も心も思考も、たった1回で変わるものではありません。<br>回数を重ねて、変化に慣れていくことが大切です。</span><span>※ 通うペースは「月2〜4回」、重度な方は「週2回」の方が多いです。</span><span>※ 基本的には、この3ヶ月でご卒業していただくイメージで考えています。</span></p>
+        </div>
       </div>
       <div>
         <h3>犬の整体</h3>
