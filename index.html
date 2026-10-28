@@ -1612,20 +1612,20 @@ dd.svc{display:grid !important;grid-template-columns:max-content auto minmax(0,1
 .tf-pic .tf-bub{right:-14px !important;top:-10px !important}
 @media (max-width:760px){.tf-pic{max-width:78%}.tf-pic .tf-bub{right:-18px !important}}
 /* header thinner 2026-10-28 */
-.hd{--hh:68px !important}
-.wrib{margin-top:68px !important}
-.stage{height:calc(100svh - 68px - 46px) !important}
-html{scroll-padding-top:76px}
-.fsfix{top:126px}
-.fsfix.up{top:80px}
+.hd{--hh:58px !important}
+.wrib{margin-top:58px !important}
+.stage{height:calc(100svh - 58px - 46px) !important}
+html{scroll-padding-top:66px}
+.fsfix{top:116px}
+.fsfix.up{top:70px}
 @media (max-width:760px){
- .hd{--hh:60px !important}
- .wrib{margin-top:60px !important}
- .stage{height:calc(100svh - 60px - 44px - 66px - env(safe-area-inset-bottom,0px)) !important}
- html{scroll-padding-top:66px}
- .fsfix,.fsfix.up{top:15px !important}
+ .hd{--hh:52px !important}
+ .wrib{margin-top:52px !important}
+ .stage{height:calc(100svh - 52px - 44px - 66px - env(safe-area-inset-bottom,0px)) !important}
+ html{scroll-padding-top:58px}
+ .fsfix,.fsfix.up{top:11px !important}
 }
-.mmark{height:52px;margin:-2px 0 -2px -4px}
+@media (min-width:761px){.hd .logo .mmark{height:44px !important;margin:0 0 0 -4px !important}.hd .nav .tel{height:38px !important;min-height:0 !important;padding-top:0 !important;padding-bottom:0 !important;display:inline-flex !important;align-items:center}.hd .menubtn{height:36px !important}}
 /* checkbox lists 2026-10-28 */
 li.ck{cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;position:relative;transition:background .2s,border-color .2s}
 .tags li.ck,.dxtags li.ck{padding-left:34px !important}
@@ -2485,6 +2485,16 @@ document.querySelectorAll(SEL).forEach(function(el){if(el.closest(SKIP)||el.data
 }catch(e){}})();</script>
 <script>
 (function(){document.querySelectorAll('.symg .tags li,.checks li,.dxtags li').forEach(function(li){li.classList.add('ck');li.setAttribute('role','checkbox');li.setAttribute('aria-checked','false');li.tabIndex=0;function t(){var on=li.classList.toggle('on');li.setAttribute('aria-checked',on?'true':'false')}li.addEventListener('click',t);li.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();t()}})})})();
+</script>
+<script>
+/* 2026-10-28: 開いたときはいつもトップから（#wan101 などのリンクで来たときだけ、その場所へ） */
+(function(){try{if('scrollRestoration' in history)history.scrollRestoration='manual'}catch(e){}
+if(!location.hash){window.scrollTo(0,0);window.addEventListener('load',function(){window.scrollTo(0,0)})}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id)return;var t=document.getElementById(id);if(!t)return;
+e.preventDefault();var f=t.closest('.fold');if(f&&!f.querySelector('.foldlock')){f.classList.add('open');var b=f.querySelector('.foldbtn');if(b){b.setAttribute('aria-expanded','true');b.textContent='閉じる'}}
+t.scrollIntoView({behavior:'smooth',block:'start'});
+if(location.hash){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}}},true);
+})();
 </script>
 </body>
 </html>
