@@ -1626,6 +1626,46 @@ html{scroll-padding-top:76px}
  .fsfix,.fsfix.up{top:15px !important}
 }
 .mmark{height:52px;margin:-2px 0 -2px -4px}
+/* checkbox lists 2026-10-28 */
+li.ck{cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;position:relative;transition:background .2s,border-color .2s}
+.tags li.ck,.dxtags li.ck{padding-left:34px !important}
+li.ck::before{content:"" !important;position:absolute !important;left:12px !important;top:50% !important;width:15px !important;height:15px !important;border:1.5px solid #8C6D2C !important;border-radius:3px !important;background:#fff !important;transform:translateY(-50%) !important;box-sizing:border-box;transition:background .2s}
+.checks li.ck{padding-left:34px !important}
+.checks li.ck::before{left:6px !important}
+li.ck::after{content:"";position:absolute;left:17px;top:50%;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:translateY(-65%) rotate(45deg) scale(0);transition:transform .2s}
+.checks li.ck::after{left:11px}
+li.ck.on::before{background:linear-gradient(135deg,#A9884A,#C9A961) !important;border-color:#8C6D2C !important}
+li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
+.tags li.ck.on,.dxtags li.ck.on{background:#FBF3DF !important;border-color:#8C6D2C !important}
+.checks li.ck.on{background:linear-gradient(90deg,rgba(217,191,130,.22),transparent)}
+.ckhint{font-size:12.5px !important;color:#7A6A55 !important;margin:-4px 0 10px !important;letter-spacing:.04em}
+@media (max-width:760px){.dxtags li.ck{padding-left:26px !important}.dxtags li.ck::before{left:8px !important;width:13px !important;height:13px !important}.dxtags li.ck::after{left:12.5px;width:4px;height:7px}.ckhint{font-size:11.5px !important}}
+/* dx tidy 2026-10-28 */
+.dxbox{padding:24px 26px 22px !important;border-radius:10px !important}
+.dxh{font-size:17px !important;margin:0 0 6px !important;padding-bottom:12px;position:relative}
+.dxh::after{content:"";position:absolute;left:0;bottom:0;width:48px;height:2px;background:linear-gradient(90deg,#A9884A,#D9BF82)}
+.dxh .nwd,.dxn .nwd{display:inline-block}
+.dxg{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px;gap:10px !important;margin-top:16px !important}
+.dxg li{border-radius:8px !important;border:1.5px solid #CDBB94 !important;background:#FDFBF6 !important;padding:12px 10px 12px 38px !important;display:flex;flex-direction:column;justify-content:center;min-height:62px;line-height:1.35 !important;white-space:normal}
+.dxg li::before{left:13px !important}
+.dxg li::after{left:18px !important}
+.dxg li b{font-size:15px;font-weight:800;color:#2A2416;white-space:nowrap}
+.dxg li small{display:block;font-size:11.5px !important;color:#6E6152 !important;margin-top:3px;letter-spacing:.02em}
+.dxn{margin-top:18px !important;padding-top:14px;border-top:1px dashed #D9C69A;font-size:14px !important;line-height:1.9 !important}
+.wdx .dxg{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.dxg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+ .dxbox{padding:16px 14px 14px !important}
+ .dxh{font-size:14.5px !important}
+ .dxg{gap:7px !important}
+ .dxg li{padding:9px 6px 9px 30px !important;min-height:54px}
+ .dxg li::before{left:9px !important;width:14px !important;height:14px !important}
+ .dxg li::after{left:13.5px !important;width:4px;height:8px}
+ .dxg li b{font-size:13px}
+ .dxg li small{font-size:10.5px !important}
+ .dxn{font-size:12px !important}
+ .dxn br{display:inline !important}
+}
 </style>
 </head>
 <body>
@@ -1713,9 +1753,9 @@ html{scroll-padding-top:76px}
   <p class="tf-apply">ご予約・お問い合わせは公式LINEへ</p>
   <div class="tf-foot"><svg class="tfleaf" viewBox="0 0 40 60" aria-hidden="true"><path d="M20 58 C20 40 20 22 20 4" stroke="#B89A62" stroke-width="1.4" fill="none"/><g fill="#C8AE7A"><ellipse cx="13" cy="16" rx="6" ry="3" transform="rotate(-35 13 16)"/><ellipse cx="27" cy="22" rx="6" ry="3" transform="rotate(35 27 22)"/><ellipse cx="13" cy="30" rx="6" ry="3" transform="rotate(-35 13 30)"/><ellipse cx="27" cy="36" rx="6" ry="3" transform="rotate(35 27 36)"/><ellipse cx="13" cy="44" rx="6" ry="3" transform="rotate(-35 13 44)"/></g></svg><div><small>「犬と人」をささえる整体院</small><b>mieuque.</b><span>ミューク</span></div><svg class="tfleaf r" viewBox="0 0 40 60" aria-hidden="true"><path d="M20 58 C20 40 20 22 20 4" stroke="#B89A62" stroke-width="1.4" fill="none"/><g fill="#C8AE7A"><ellipse cx="13" cy="16" rx="6" ry="3" transform="rotate(-35 13 16)"/><ellipse cx="27" cy="22" rx="6" ry="3" transform="rotate(35 27 22)"/><ellipse cx="13" cy="30" rx="6" ry="3" transform="rotate(-35 13 30)"/><ellipse cx="27" cy="36" rx="6" ry="3" transform="rotate(35 27 36)"/><ellipse cx="13" cy="44" rx="6" ry="3" transform="rotate(-35 13 44)"/></g></svg></div>
 </div><div class="dxbox wdx">
-          <p class="dxh">こんな診断を受けた子のご家族から、<br class="pc">たくさんご相談をいただいています</p>
-          <ul class="dxtags"><li><b>パテラ</b><small>（膝蓋骨脱臼）</small></li><li><b>椎間板ヘルニア</b></li><li><b>後ろ足の麻痺</b>・ふらつき</li><li><b>手術のあと</b>の歩き方</li></ul>
-          <p class="dxn">「うちの子、パテラって言われて…」そんなご相談も、まずは気軽にどうぞ。<br>かかりつけの獣医師の治療・指示を大切にしながら、日々のからだのケアとしてお手伝いします。</p>
+          <p class="dxh"><span class="nwd">こんな診断を受けた子のご家族から、</span><span class="nwd">たくさんご相談をいただいています。</span></p>
+          <ul class="dxtags dxg"><li><b>パテラ</b><small>膝蓋骨脱臼</small></li><li><b>椎間板ヘルニア</b></li><li><b>後ろ足の麻痺</b><small>ふらつき</small></li><li><b>手術のあと</b><small>歩き方が気になる</small></li></ul>
+          <p class="dxn"><span class="nwd">「うちの子、パテラって言われて…」</span><span class="nwd">そんなご相談も、まずは気軽にどうぞ。</span><br><span class="nwd">かかりつけの獣医師の治療・指示を大切にしながら、</span><span class="nwd">日々のからだのケアとしてお手伝いします。</span></p>
         </div>
         <p class="note vetnote wvet"><span class="vn1">※ 病気やケガの診断・治療は、獣医師の領域です。</span><span class="vn2">※ 気になる症状がある場合は、まずは動物病院にご相談ください。</span></p></div>
     <div class="wbody">
@@ -1833,6 +1873,7 @@ html{scroll-padding-top:76px}
         <div>
           <p class="newonly"><b>人の整体の新規受付は、大阪 守口院のみです。</b><br>兵庫 西明石院は、現在、新規の方のご予約を受け付けておりません。</p>
           <p style="font-size:13px;letter-spacing:0.14em;margin-bottom:10px">こんなお悩みの方へ</p>
+          <p class="ckhint">当てはまるものを、タップしてチェックしてみてください。</p>
           <div class="symg"><div class="sg"><span class="sgl">首・頭</span><ul class="tags"><li>首の痛み</li><li>肩こり</li><li>頭痛</li><li>ストレートネック</li><li>頸椎ヘルニア</li></ul></div><div class="sg"><span class="sgl">肩・腕・手</span><ul class="tags"><li>五十肩</li><li>腱板損傷</li><li>胸郭出口症候群</li><li>テニス肘・野球肘</li><li>手根管症候群</li><li>ばね指</li><li>手や腕のしびれ</li></ul></div><details class="more symall" open><summary>ほかのお悩みも見る</summary><div class="symg"><div class="sg"><span class="sgl">腰・背中</span><ul class="tags"><li>ぎっくり腰</li><li>慢性腰痛</li><li>腰椎ヘルニア</li><li>脊柱管狭窄症</li><li>坐骨神経痛</li><li>すべり症・分離症</li><li>肋間神経痛</li><li>側弯症</li></ul></div><div class="sg"><span class="sgl">ひざ・足</span><ul class="tags"><li>変形性膝関節症</li><li>捻挫</li><li>アキレス腱の痛み</li><li>足底筋膜炎</li><li>シンスプリント</li><li>外反母趾</li></ul></div><div class="sg"><span class="sgl">姿勢</span><ul class="tags"><li>姿勢のゆがみ</li><li>骨盤のゆがみ</li></ul></div></div></details></div>
         </div>
       </article>
@@ -1843,12 +1884,13 @@ html{scroll-padding-top:76px}
         <p><span class="hl">年齢とともに変わっていく足腰を、やさしい手技で</span>整えます。<br>施術は、院の近くに設けた屋外の施術スペース（屋根つき）か、ご自宅への出張で承ります。<br>飼い主さまの横で、安心して受けていただけます。</p>
         <div>
           <p style="font-size:13px;letter-spacing:0.14em;margin-bottom:10px">こんな様子はありませんか</p>
+          <p class="ckhint">当てはまるものを、タップしてチェックしてみてください。</p>
           <ul class="checks"><li>シニアになって、足腰が弱ってきた</li><li>散歩に行きたがらない、すぐ座りこむ</li><li>段差や階段をためらうようになった</li><li>歩き方がぎこちない、ふらつく</li></ul>
         </div>
         <div class="dxbox">
-          <p class="dxh">こんな診断を受けた子のご家族から、<br class="pc">たくさんご相談をいただいています</p>
-          <ul class="dxtags"><li><b>パテラ</b><small>（膝蓋骨脱臼）</small></li><li><b>椎間板ヘルニア</b></li><li><b>後ろ足の麻痺</b>・ふらつき</li><li><b>手術のあと</b>の歩き方</li></ul>
-          <p class="dxn">「うちの子、パテラって言われて…」そんなご相談も、まずは気軽にどうぞ。<br>かかりつけの獣医師の治療・指示を大切にしながら、日々のからだのケアとしてお手伝いします。</p>
+          <p class="dxh"><span class="nwd">こんな診断を受けた子のご家族から、</span><span class="nwd">たくさんご相談をいただいています。</span></p>
+          <ul class="dxtags dxg"><li><b>パテラ</b><small>膝蓋骨脱臼</small></li><li><b>椎間板ヘルニア</b></li><li><b>後ろ足の麻痺</b><small>ふらつき</small></li><li><b>手術のあと</b><small>歩き方が気になる</small></li></ul>
+          <p class="dxn"><span class="nwd">「うちの子、パテラって言われて…」</span><span class="nwd">そんなご相談も、まずは気軽にどうぞ。</span><br><span class="nwd">かかりつけの獣医師の治療・指示を大切にしながら、</span><span class="nwd">日々のからだのケアとしてお手伝いします。</span></p>
         </div>
         <p class="note vetnote"><span class="vn1">※ 病気やケガの診断・治療は、獣医師の領域です。</span><span class="vn2">※ 気になる症状がある場合は、まずは動物病院にご相談ください。</span></p>
       </article>
@@ -2441,5 +2483,8 @@ document.querySelectorAll(SEL).forEach(function(el){if(el.closest(SKIP)||el.data
  el.querySelectorAll('b,strong,em,span,a,small').forEach(function(x){if(x.closest(SKIP))return;var nx=x.nextSibling;if(nx&&nx.nodeType==3&&!NOSTART.test(nx.nodeValue)&&nx.nodeValue.trim().length>=3)x.after(document.createElement('wbr'));});
  var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:function(n){return n.parentElement&&n.parentElement.closest(SKIP)?2:1}}),a=[],n;while(n=w.nextNode())a.push(n);a.forEach(proc);});
 }catch(e){}})();</script>
+<script>
+(function(){document.querySelectorAll('.symg .tags li,.checks li,.dxtags li').forEach(function(li){li.classList.add('ck');li.setAttribute('role','checkbox');li.setAttribute('aria-checked','false');li.tabIndex=0;function t(){var on=li.classList.toggle('on');li.setAttribute('aria-checked',on?'true':'false')}li.addEventListener('click',t);li.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();t()}})})})();
+</script>
 </body>
 </html>
