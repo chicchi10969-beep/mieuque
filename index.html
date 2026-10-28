@@ -1611,6 +1611,21 @@ dd.svc{display:grid !important;grid-template-columns:max-content auto minmax(0,1
 .tf-pic img{-webkit-mask-image:none !important;mask-image:none !important;border-radius:20px;border:2px solid #C9A961;box-shadow:0 6px 18px rgba(90,70,40,.16)}
 .tf-pic .tf-bub{right:-14px !important;top:-10px !important}
 @media (max-width:760px){.tf-pic{max-width:78%}.tf-pic .tf-bub{right:-18px !important}}
+/* header thinner 2026-10-28 */
+.hd{--hh:68px !important}
+.wrib{margin-top:68px !important}
+.stage{height:calc(100svh - 68px - 46px) !important}
+html{scroll-padding-top:76px}
+.fsfix{top:126px}
+.fsfix.up{top:80px}
+@media (max-width:760px){
+ .hd{--hh:60px !important}
+ .wrib{margin-top:60px !important}
+ .stage{height:calc(100svh - 60px - 44px - 66px - env(safe-area-inset-bottom,0px)) !important}
+ html{scroll-padding-top:66px}
+ .fsfix,.fsfix.up{top:15px !important}
+}
+.mmark{height:52px;margin:-2px 0 -2px -4px}
 </style>
 </head>
 <body>
