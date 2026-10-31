@@ -1762,6 +1762,42 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
  .pcask{font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){.pcin{transition:none}.pcturn i{animation:none !important}}
+/* specialist subscription box = same look as specialist card 2026-10-31 */
+.subbox.spx{position:relative;max-width:780px;margin:34px auto 0 !important;padding:34px 30px 28px;border:0;border-radius:6px;color:#F4ECDC;
+ background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.10),transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(0,0,0,.25),transparent 55%),#23304D;
+ box-shadow:0 14px 34px rgba(20,25,45,.25)}
+.subbox.spx::before{content:"";position:absolute;inset:8px;border:1.5px solid #D9BF82;border-radius:3px;pointer-events:none}
+.subbox.spx::after{content:"";position:absolute;inset:13px;border:1px solid rgba(217,191,130,.45);border-radius:2px;pointer-events:none;background:
+ radial-gradient(circle at 0 0,#D9BF82 0 3px,transparent 3.5px) 0 0/14px 14px no-repeat,
+ radial-gradient(circle at 100% 0,#D9BF82 0 3px,transparent 3.5px) 100% 0/14px 14px no-repeat,
+ radial-gradient(circle at 0 100%,#D9BF82 0 3px,transparent 3.5px) 0 100%/14px 14px no-repeat,
+ radial-gradient(circle at 100% 100%,#D9BF82 0 3px,transparent 3.5px) 100% 100%/14px 14px no-repeat}
+.subbox.spx>*{position:relative;z-index:1}
+.spx .sbno{text-align:center;font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.3em;color:#D9BF82;margin:0 0 2px}
+.spx .sben{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(30px,3.4vw,40px);line-height:1;margin:0 0 6px;background:linear-gradient(100deg,#B8964F,#F1E2B6 45%,#C9A961 70%,#F1E2B6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.spx .sbh{text-align:center;color:#F4ECDC !important;font-size:20px;letter-spacing:.2em;margin:0 0 14px}
+.spx .sbh small{display:block;margin:6px 0 0;color:#D9BF82 !important;font-size:12px;letter-spacing:.08em;font-family:var(--body)}
+.spx .sblead{text-align:center;color:#EDE4D3 !important}
+.spx .sblead b{color:#F1E2B6 !important;background:linear-gradient(transparent 62%,rgba(217,191,130,.28) 62%) !important}
+.spx .sbsteps li{background:rgba(255,255,255,.06) !important;border:1px solid rgba(217,191,130,.45) !important}
+.spx .sbsteps li span,.spx .sbsteps li small{color:#D8CDB8 !important}
+.spx .sbsteps li b{color:#F1E2B6 !important;font-family:var(--mincho)}
+.spx .subcmp{background:rgba(255,255,255,.05) !important;border:1px solid rgba(217,191,130,.4) !important}
+.spx .subcmp .scttl{color:#F4ECDC !important}
+.spx .subcmp .scttl small{color:#D8CDB8 !important}
+.spx .subcmp th,.spx .subcmp td{border-bottom-color:rgba(217,191,130,.28) !important;color:#EDE4D3 !important}
+.spx .subcmp th small{color:#C9BDA6 !important}
+.spx .subcmp th.sub{color:#F1E2B6 !important}
+.spx .subcmp .sub{background:rgba(217,191,130,.12) !important}
+.spx .subcmp tr.best td.sub{background:rgba(217,191,130,.22) !important}
+.spx .subcmp td.sub{color:#F1E2B6 !important;font-family:var(--mincho)}
+.spx .subcmp td em{background:linear-gradient(135deg,#B8964F,#D9BF82) !important;color:#23304D !important}
+.spx .subcmp td em.eq{background:rgba(255,255,255,.14) !important;color:#EDE4D3 !important}
+.spx .subcmp .scpoint{background:rgba(255,255,255,.04) !important;border-color:rgba(217,191,130,.5) !important;color:#EDE4D3 !important}
+.spx .subcmp .scpoint b{color:#F1E2B6 !important}
+.spx .psubn,.spx .psubn span{color:#D8CDB8 !important}
+.pcgo{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:760px){.subbox.spx{padding:28px 16px 22px}.spx .sbh{font-size:17px}}
 </style>
 </head>
 <body>
@@ -2162,7 +2198,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
                 <dl class="pcprice">
                   <div><dt>初回<small>カウンセリング込み</small></dt><dd>8,000円</dd></div>
                   <div><dt>2回目以降<small>都度払い</small></dt><dd>12,000円</dd></div>
-                  <div><dt>3ヶ月のサブスク<small>入会金30,000円＋期間中1回6,000円</small></dt><dd class="pcsm">下の表へ ↓</dd></div>
+                  <div><dt>3ヶ月のサブスク<small>入会金30,000円＋期間中1回6,000円</small></dt><dd class="pcsm"><a class="pcgo" href="#sp-sub">下の表へ ↓</a></dd></div>
                 </dl>
                 <p class="pcwho">担当　竹元 晃嗣</p>
                 <p class="pcturn">表にもどる <i>↺</i></p>
@@ -2172,8 +2208,8 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
         </div>
         <p class="pcask"><span class="nwk2">どちらがいいか迷ったら、</span><span class="nwk2">公式LINEでお気軽にご相談ください。</span><br><span class="nwk2">からだの状態をお聞きして、</span><span class="nwk2">担当をご提案します。</span></p>
         <p class="psubn"><span>※ 料金は全て税込です。</span></p>
-        <div class="subbox">
-          <p class="sbh"><small>スペシャリスト（竹元）</small>3ヶ月のサブスク</p>
+        <div class="subbox spx" id="sp-sub">
+          <p class="sbno">No.02 ／ Specialist</p><p class="sben">Specialist</p><p class="sbh">3ヶ月のサブスク<small>スペシャリスト（担当　竹元 晃嗣）</small></p>
           <p class="sblead">3ヶ月のあいだ、<b>何度来ても1回6,000円</b>になるプランです。<br>2回目以降の都度払い（12,000円）の半額で受けていただけます。</p>
           <ol class="sbsteps">
             <li><span>入会金</span><b>30,000円</b><small>はじめに1回だけ</small></li>
