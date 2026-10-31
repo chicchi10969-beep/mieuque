@@ -1887,6 +1887,14 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
 
 @media (max-width:760px){.dxbox .dxh{font-size:13.5px !important;letter-spacing:0 !important}.dxbox .checks li{font-size:13px !important;letter-spacing:0 !important;padding-left:30px !important}.dxbox .checks li.ck::before{left:4px !important}.dxbox .checks li.ck::after{left:9px}}
 @media (max-width:370px){.dxbox .dxh{font-size:12.5px !important}.dxbox .checks li{font-size:12px !important}}
+
+.clink{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:6px 14px;font-size:13px;font-weight:700;letter-spacing:.04em;color:#6B4A1E;border:1px solid #C9A961;border-radius:999px;background:#FFFDF7;text-decoration:none;white-space:nowrap;transition:background .2s}
+.clink:hover{background:#FBF3DF}
+.clink i{font-style:normal;font-size:12px}
+@media (max-width:760px){.clink{font-size:12px;padding:5px 12px}}
+
+.cln{white-space:nowrap}
+@media (min-width:761px){.cln{font-size:min(1em,1.9vw)}}
 </style>
 </head>
 <body>
@@ -2173,7 +2181,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
         <p class="m2l"><span>ミュークは、大阪府泉佐野市の<b class="clinic">ひがしの耳鼻咽喉科</b>と提携し、</span><span>月2回、リハビリ室で患者さまへの出張施術を担当しています。</span></p>
         <p>医療の現場で求められる、ていねいさと確かさ。<br>そこで積み重ねている経験を、ミュークでの毎日の施術にも生かしています。</p>
         <dl class="mstats">
-          <div><dt>提携先</dt><dd>ひがしの耳鼻咽喉科<small>大阪府泉佐野市</small></dd></div>
+          <div><dt>提携先</dt><dd><span class="cln">ひがしの耳鼻咽喉科</span><small>大阪府泉佐野市</small><a class="clink" href="https://www.higashino-jibi-inkoka.com/" target="_blank" rel="noopener">クリニックの公式サイトを見る<i aria-hidden="true">↗</i></a></dd></div>
           <div><dt>施術の場所</dt><dd>リハビリ室</dd></div>
           <div><dt>頻度</dt><dd>月<b>2</b>回</dd></div>
         </dl>
@@ -2728,7 +2736,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 if(!window.Intl||!Intl.Segmenter)return;
 var seg=new Intl.Segmenter('ja',{granularity:'word'});
 var SEL='section p,section li,section dd,section dt,section summary,section h2,section h3,section th,section td,footer p,.fdog,.wdx p,.kids2';
-var SKIP='.pcard,.nwk2,.tfl,.tfn2,.tf-title,.tf-kicker,.tf-catch,.stage,.hd,.nsbig,.nsplate,.topcopy,script,style,svg,button,.nw,.nw2,.nwh,.nwk,.tx';
+var SKIP='.clink,.pcard,.nwk2,.tfl,.tfn2,.tf-title,.tf-kicker,.tf-catch,.stage,.hd,.nsbig,.nsplate,.topcopy,script,style,svg,button,.nw,.nw2,.nwh,.nwk,.tx';
 var END=/[、。！？」）・…]$|^(を|が|は|に|で|と|も|へ|や|か|の|て|して|から|まで|より|には|では|とも|にも|ても|ので|けど|など|として|について|ながら|ように)$/;
 var NOSTART=/^[、。！？」）ーっゃゅょァィゥェォッャュョ・…らりるれろんずぬ]/;
 var HIRA=/[぀-ゟ]$/,KATA=/[゠-ヿ]$/,KANJI0=/^[一-鿿]/,KK0=/^[一-鿿゠-ヿ「（]/;
