@@ -1906,6 +1906,26 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
 @media (max-width:760px){.wgrid .world > .ph{aspect-ratio:4/3 !important;width:100%}}
 
 @media (max-width:760px){#dogs > .ph img:first-child{object-position:50% 85% !important}#people > .ph img{object-position:50% 40%}}
+
+/* thinner reservation bands: 2026-10-31 */
+.rsv{padding-top:20px !important;padding-bottom:20px !important}
+.rsv .rsvs{display:none !important}
+.rsv .rsvchips{margin:0 0 6px !important}
+.rsv .rsvt{margin:0 0 10px !important;font-size:clamp(18px,1.8vw,22px) !important}
+.rsv .rsvb{margin-bottom:8px !important}
+.rsv .rb{padding-top:11px !important;padding-bottom:11px !important}
+.rsv .rsvtel{line-height:1.5}
+@media (min-width:1000px){
+ .rsv .rsvin{display:grid !important;grid-template-columns:auto auto;column-gap:48px;align-items:center;justify-content:center;max-width:1080px;margin:0 auto}
+ .rsv .rsvchips,.rsv .rsvt{grid-column:1;text-align:left;justify-content:flex-start}
+ .rsv .rsvchips{grid-row:1;align-self:end}
+ .rsv .rsvt{grid-row:2;align-self:start;margin:0 !important}
+ .rsv .rsvb{grid-column:2;grid-row:1;margin:0 0 6px !important;align-self:end}
+ .rsv .rsvtel{grid-column:2;grid-row:2;align-self:start;margin:0 !important}
+}
+@media (max-width:760px){.rsv{padding-top:16px !important;padding-bottom:16px !important}.rsv .rsvt{font-size:17px !important;margin-bottom:8px !important}.rsv .rb{padding-top:10px !important;padding-bottom:10px !important}}
+
+@media (max-width:760px){.rsv .rsvb{display:grid !important;grid-template-columns:1fr 1fr;gap:8px !important}.rsv .rsvb .rb{width:auto !important;min-width:0 !important;margin:0 !important;font-size:12.5px !important;letter-spacing:0 !important;padding-left:6px !important;padding-right:6px !important;white-space:nowrap}.rsv .rsvb .rb::after{display:none !important}}
 </style>
 </head>
 <body>
