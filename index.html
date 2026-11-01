@@ -2007,6 +2007,24 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
 @media (max-width:760px){.awdoc{padding:6px 6px}}
 
 .awb{grid-template-columns:repeat(2,minmax(0,340px)) !important;justify-content:center}
+
+.awh .awh1{display:block;font-size:.62em;letter-spacing:.1em;line-height:1.3}
+.awh .awh2{display:block;font-size:1.05em;margin:0;letter-spacing:.14em;line-height:1.15}
+@media (max-width:760px){.awh{font-size:38px}.awh .awh1{font-size:.66em;letter-spacing:.04em}.awl{width:34px !important}}
+@media (max-width:370px){.awh{font-size:34px}}
+
+.awh .awh2{background:linear-gradient(100deg,#7E5F22,#B8964F 35%,#D9BF82 55%,#9A7A3C 80%) !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;filter:drop-shadow(0 1px 0 rgba(255,255,255,.7))}
+
+/* staff 受付中 -> price card -> reserve: 2026-11-01 */
+.tstat a.tgo{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.06em;padding:4px 6px 4px 12px;border-radius:999px;background:#EEF3E2;color:#4E6A22;border:1px solid #B9CC8E;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s}
+.tstat a.tgo i{font-style:normal;font-size:11px;background:#4E6A22;color:#fff;border-radius:999px;padding:2px 9px;letter-spacing:.02em}
+.tstat a.tgo:hover{background:#E2EBCF;transform:translateX(2px)}
+.pcrsv{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;margin:4px 0 14px}
+.pcrsv .rb{display:flex;align-items:center;justify-content:center;min-width:0 !important;width:auto !important;margin:0 !important;padding:11px 6px !important;font-size:13px !important;letter-spacing:.02em !important;border-radius:999px;white-space:nowrap}
+.pcrsv .rb::after{display:none !important}
+.pcard.flash .pcf{animation:pcflash 1.6s ease}
+@keyframes pcflash{0%,100%{box-shadow:0 12px 30px rgba(60,40,15,.16)}30%{box-shadow:0 0 0 4px #D9BF82,0 0 36px rgba(217,191,130,.9)}}
+@media (max-width:760px){.tstat a.tgo{font-size:11px;padding:3px 4px 3px 9px;gap:5px}.tstat a.tgo i{font-size:10px;padding:2px 7px}.pcrsv .rb{font-size:12px !important}}
 </style>
 </head>
 <body>
@@ -2077,7 +2095,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
       <svg class="awl" viewBox="20 10 130 250" aria-hidden="true"><defs><linearGradient id="awg0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9884A"/><stop offset=".5" stop-color="#E3CB8E"/><stop offset="1" stop-color="#9A7A3C"/></linearGradient></defs><g><path d="M131.9 232.4 A104 104 0 0 1 128.4 28.3" fill="none" stroke="url(#awg0)" stroke-width="2.6" stroke-linecap="round"/><g fill="url(#awg0)"><ellipse cx="120.8" cy="239.1" rx="5.2" ry="12.5" transform="rotate(235.0 120.8 239.1)"/><ellipse cx="125.4" cy="221.8" rx="5.2" ry="12.5" transform="rotate(155.0 125.4 221.8)"/><ellipse cx="93.5" cy="227.9" rx="5.0" ry="12.1" transform="rotate(250.0 93.5 227.9)"/><ellipse cx="102.5" cy="212.3" rx="5.0" ry="12.1" transform="rotate(170.0 102.5 212.3)"/><ellipse cx="70.1" cy="209.9" rx="4.9" ry="11.8" transform="rotate(265.0 70.1 209.9)"/><ellipse cx="82.8" cy="197.2" rx="4.9" ry="11.8" transform="rotate(185.0 82.8 197.2)"/><ellipse cx="52.1" cy="186.5" rx="4.7" ry="11.4" transform="rotate(280.0 52.1 186.5)"/><ellipse cx="67.7" cy="177.5" rx="4.7" ry="11.4" transform="rotate(200.0 67.7 177.5)"/><ellipse cx="40.9" cy="159.2" rx="4.6" ry="11.0" transform="rotate(295.0 40.9 159.2)"/><ellipse cx="58.2" cy="154.6" rx="4.6" ry="11.0" transform="rotate(215.0 58.2 154.6)"/><ellipse cx="37.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(310.0 37.0 130.0)"/><ellipse cx="55.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(230.0 55.0 130.0)"/><ellipse cx="40.9" cy="100.8" rx="4.3" ry="10.2" transform="rotate(325.0 40.9 100.8)"/><ellipse cx="58.2" cy="105.4" rx="4.3" ry="10.2" transform="rotate(245.0 58.2 105.4)"/><ellipse cx="52.1" cy="73.5" rx="4.1" ry="9.9" transform="rotate(340.0 52.1 73.5)"/><ellipse cx="67.7" cy="82.5" rx="4.1" ry="9.9" transform="rotate(260.0 67.7 82.5)"/><ellipse cx="70.1" cy="50.1" rx="4.0" ry="9.5" transform="rotate(355.0 70.1 50.1)"/><ellipse cx="82.8" cy="62.8" rx="4.0" ry="9.5" transform="rotate(275.0 82.8 62.8)"/><ellipse cx="93.5" cy="32.1" rx="3.8" ry="9.1" transform="rotate(370.0 93.5 32.1)"/><ellipse cx="102.5" cy="47.7" rx="3.8" ry="9.1" transform="rotate(290.0 102.5 47.7)"/><ellipse cx="120.8" cy="20.9" rx="3.6" ry="8.8" transform="rotate(385.0 120.8 20.9)"/><ellipse cx="125.4" cy="38.2" rx="3.6" ry="8.8" transform="rotate(305.0 125.4 38.2)"/><ellipse cx="128.4" cy="20.3" rx="4.6" ry="12" transform="rotate(-12 128.4 20.3)"/></g></g></svg>
       <div class="awc">
         <p class="awk"><i></i><span>Medical Partnership</span><i></i></p>
-        <p class="awh"><span class="nwk2">医療機関と</span><b class="nwk2">提携</b></p>
+        <p class="awh"><span class="awh1">医療機関と連携する</span><b class="awh2">整体院</b></p>
         <p class="aws"><span class="nwk2">クリニックと連携し、</span><span class="nwk2">リハビリ室で</span><span class="nwk2">患者さまのからだの</span><span class="nwk2">メンテナンスを</span><span class="nwk2">担当しています。</span></p><p class="awdoc"><i></i><span><span class="nwk2">そして、</span><span class="nwk2">現役のドクターも</span><span class="nwk2">何人も、</span><span class="nwk2">ご自身のからだのケアに</span><span class="nwk2">ミュークへ</span><span class="nwk2">通ってくださっています。</span></span><i></i></p>
       </div>
       <svg class="awl" viewBox="20 10 130 250" aria-hidden="true"><defs><linearGradient id="awg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9884A"/><stop offset=".5" stop-color="#E3CB8E"/><stop offset="1" stop-color="#9A7A3C"/></linearGradient></defs><g transform="translate(150 0) scale(-1 1)"><path d="M131.9 232.4 A104 104 0 0 1 128.4 28.3" fill="none" stroke="url(#awg1)" stroke-width="2.6" stroke-linecap="round"/><g fill="url(#awg1)"><ellipse cx="120.8" cy="239.1" rx="5.2" ry="12.5" transform="rotate(235.0 120.8 239.1)"/><ellipse cx="125.4" cy="221.8" rx="5.2" ry="12.5" transform="rotate(155.0 125.4 221.8)"/><ellipse cx="93.5" cy="227.9" rx="5.0" ry="12.1" transform="rotate(250.0 93.5 227.9)"/><ellipse cx="102.5" cy="212.3" rx="5.0" ry="12.1" transform="rotate(170.0 102.5 212.3)"/><ellipse cx="70.1" cy="209.9" rx="4.9" ry="11.8" transform="rotate(265.0 70.1 209.9)"/><ellipse cx="82.8" cy="197.2" rx="4.9" ry="11.8" transform="rotate(185.0 82.8 197.2)"/><ellipse cx="52.1" cy="186.5" rx="4.7" ry="11.4" transform="rotate(280.0 52.1 186.5)"/><ellipse cx="67.7" cy="177.5" rx="4.7" ry="11.4" transform="rotate(200.0 67.7 177.5)"/><ellipse cx="40.9" cy="159.2" rx="4.6" ry="11.0" transform="rotate(295.0 40.9 159.2)"/><ellipse cx="58.2" cy="154.6" rx="4.6" ry="11.0" transform="rotate(215.0 58.2 154.6)"/><ellipse cx="37.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(310.0 37.0 130.0)"/><ellipse cx="55.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(230.0 55.0 130.0)"/><ellipse cx="40.9" cy="100.8" rx="4.3" ry="10.2" transform="rotate(325.0 40.9 100.8)"/><ellipse cx="58.2" cy="105.4" rx="4.3" ry="10.2" transform="rotate(245.0 58.2 105.4)"/><ellipse cx="52.1" cy="73.5" rx="4.1" ry="9.9" transform="rotate(340.0 52.1 73.5)"/><ellipse cx="67.7" cy="82.5" rx="4.1" ry="9.9" transform="rotate(260.0 67.7 82.5)"/><ellipse cx="70.1" cy="50.1" rx="4.0" ry="9.5" transform="rotate(355.0 70.1 50.1)"/><ellipse cx="82.8" cy="62.8" rx="4.0" ry="9.5" transform="rotate(275.0 82.8 62.8)"/><ellipse cx="93.5" cy="32.1" rx="3.8" ry="9.1" transform="rotate(370.0 93.5 32.1)"/><ellipse cx="102.5" cy="47.7" rx="3.8" ry="9.1" transform="rotate(290.0 102.5 47.7)"/><ellipse cx="120.8" cy="20.9" rx="3.6" ry="8.8" transform="rotate(385.0 120.8 20.9)"/><ellipse cx="125.4" cy="38.2" rx="3.6" ry="8.8" transform="rotate(305.0 125.4 38.2)"/><ellipse cx="128.4" cy="20.3" rx="4.6" ry="12" transform="rotate(-12 128.4 20.3)"/></g></g></svg>
@@ -2086,7 +2104,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
       <li><p class="awr"><span>アスリート</span></p><p class="awn">元 柔道<br>日本代表</p><p class="awm"><span class="nwk2">シドニーオリンピック</span><span class="nwk2">代表候補</span></p></li>
       <li><p class="awr"><span>国家資格</span></p><p class="awn">柔道整復師</p><p class="awm"><span class="nwk2">国家資格をもつ</span><span class="nwk2">スタッフが在籍</span></p></li>
     </ul>
-    <p class="awnote">※ 提携先：大阪府泉佐野市 ひがしの耳鼻咽喉科（月2回・リハビリ室にて出張施術）</p>
+    <p class="awnote">※ 連携先：大阪府泉佐野市 ひがしの耳鼻咽喉科（月2回・リハビリ室にて出張施術）</p>
   </div>
 </section>
 <div class="navybar navysep" aria-hidden="true"></div>
@@ -2154,7 +2172,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
           <ul class="tcv"><li>シドニーオリンピック代表候補</li><li>元 整体技術塾 講師</li><li>ニューロンメディカルセラピスト</li></ul>
           <p class="tname"><b>鳥居 美紀</b><small>とりい みき</small></p>
           <p class="tline">痛みの奥にある、<br>その人の心まで見る。</p>
-          <ul class="tstat"><li><span>人の整体</span><em class="ok">受付中</em></li></ul>
+          <ul class="tstat"><li><span>人の整体</span><a class="ok tgo" href="#pc-daily" data-pc="pc-daily">受付中<i>料金を見る →</i></a></li></ul>
         </div>
       </article>
       <article class="tcard" id="t-kosuke">
@@ -2165,7 +2183,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
           <ul class="tcv"><li>国家資格 柔道整復師<small>（人の身体の国家資格）</small></li><li>ナチュラリゼーション認定トレーナー</li><li>ニューロンメディカルセラピスト</li></ul>
           <p class="tname"><b>竹元 晃嗣</b><small>たけもと こうすけ</small></p>
           <p class="tline"><span class="nwk2">研ぎ澄まされた、</span><span class="nwk2">繊細な手技と見る目。</span><span class="tlpc"><br><span class="nwk2">人の身体のプロが、</span><br><span class="nwk2">わんちゃんの身体も</span><span class="nwk2">丁寧に診ます。</span><br><span class="nwk2">人の整体では、</span><br><span class="nwk2">症状の重い方を</span><span class="nwk2">担当しています。</span></span></p>
-          <ul class="tstat"><li><span>わんちゃん整体<img class="tlu" data-lulu alt=""></span><em class="ok">受付中</em></li><li><span>人の整体<small>プレミアム</small></span><em class="ok">受付中</em></li></ul>
+          <ul class="tstat"><li><span>わんちゃん整体<img class="tlu" data-lulu alt=""></span><a class="ok tgo" href="#pc-dog" data-pc="pc-dog">受付中<i>料金を見る →</i></a></li><li><span>人の整体<small>プレミアム</small></span><a class="ok tgo" href="#pc-prem" data-pc="pc-prem">受付中<i>料金を見る →</i></a></li></ul>
         </div>
       </article>
       <article class="tcard" id="t-miwa">
@@ -2176,7 +2194,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
           <ul class="tcv"><li>国家資格 保育士</li><li>ニューロンメディカルセラピスト</li></ul>
           <p class="tname"><b>山元 美和</b><small>やまもと みわ</small></p>
           <p class="tline">はじめての方も、<br>安心してご相談ください。</p>
-          <ul class="tstat"><li><span>人の整体</span><em class="ok">受付中</em></li></ul>
+          <ul class="tstat"><li><span>人の整体</span><a class="ok tgo" href="#pc-daily" data-pc="pc-daily">受付中<i>料金を見る →</i></a></li></ul>
           <p class="kids2"><span class="nwk">お子さま連れの</span><span class="nwk">ママも大歓迎です</span><small>（要予約）</small></p>
         </div>
       </article>
@@ -2260,7 +2278,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
         <h3>人の整体</h3>
         <p class="pcintro"><span class="nwk2">ミュークの人の整体は、</span><span class="nwk2">2つのコースからお選びいただけます。</span><br><span class="pchint"><span class="nwk2">カードをタップすると、</span><span class="nwk2">ペラッとめくれて料金が見られます。</span></span></p>
         <div class="pcards">
-          <div class="pcard" tabindex="0" role="button" aria-pressed="false" aria-label="デイリーコースの料金を見る">
+          <div class="pcard" id="pc-daily" tabindex="0" role="button" aria-pressed="false" aria-label="デイリーコースの料金を見る">
             <div class="pcin">
               <div class="pcf pcfront">
                 <p class="pcno">No.01</p>
@@ -2281,11 +2299,12 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
                   <div><dt>回数券（10回）<small>1回あたり5,000円</small></dt><dd>50,000円</dd></div>
                 </dl>
                 <p class="pcwho">担当　鳥居 美紀・山元 美和</p>
+                <div class="pcrsv"><a class="rb rb-line" href="https://lin.ee/SBqauMf" target="_blank" rel="noopener">LINEで予約</a><a class="rb rb-ig" href="https://ig.me/m/takemoto.mieuque" target="_blank" rel="noopener">インスタDMで予約</a></div>
                 <p class="pcturn">表にもどる <i>↺</i></p>
               </div>
             </div>
           </div>
-          <div class="pcard sp" tabindex="0" role="button" aria-pressed="false" aria-label="プレミアムコースの料金を見る">
+          <div class="pcard sp" id="pc-prem" tabindex="0" role="button" aria-pressed="false" aria-label="プレミアムコースの料金を見る">
             <div class="pcin">
               <div class="pcf pcfront">
                 <p class="pcno">No.02</p>
@@ -2325,6 +2344,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
                   <p class="pcnt"><span>※ 身体も心も思考も、たった1回で変わるものではありません。回数を重ねて、変化に慣れていくことが大切です。</span><span>※ 通うペースは「月2〜4回」、重度な方は「週2回」の方が多いです。</span><span>※ 基本的には、この3ヶ月でご卒業していただくイメージで考えています。</span></p>
                 </div>
                 <p class="pcwho">担当　竹元 晃嗣</p>
+                <div class="pcrsv"><a class="rb rb-line" href="https://lin.ee/SBqauMf" target="_blank" rel="noopener">LINEで予約</a><a class="rb rb-ig" href="https://ig.me/m/takemoto.mieuque" target="_blank" rel="noopener">インスタDMで予約</a></div>
                 <p class="pcturn">表にもどる <i>↺</i></p>
               </div>
             </div>
@@ -2337,7 +2357,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
       <div>
         <h3>犬の整体</h3>
         <div class="pcards pcone">
-          <div class="pcard dg" tabindex="0" role="button" aria-pressed="false" aria-label="わんちゃん整体の料金を見る">
+          <div class="pcard dg" id="pc-dog" tabindex="0" role="button" aria-pressed="false" aria-label="わんちゃん整体の料金を見る">
             <div class="pcin">
               <div class="pcf pcfront">
                 <p class="pcno">No.03</p>
@@ -2358,6 +2378,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
                 </dl>
                 <p class="pcmed"><span class="nwk2">※ 病気やケガの診断・治療は、</span><span class="nwk2">獣医師の領域です。</span></p>
                 <p class="pcwho">担当　竹元 晃嗣</p>
+                <div class="pcrsv"><a class="rb rb-line" href="https://lin.ee/SBqauMf" target="_blank" rel="noopener">LINEで予約</a><a class="rb rb-ig" href="https://ig.me/m/takemoto.mieuque" target="_blank" rel="noopener">インスタDMで予約</a></div>
                 <p class="pcturn">表にもどる <i>↺</i></p>
               </div>
             </div>
@@ -2929,5 +2950,6 @@ cs.forEach(function(c){new MutationObserver(fit).observe(c,{attributes:true,attr
 window.addEventListener('resize',fit);window.addEventListener('load',fit);document.addEventListener('DOMContentLoaded',fit);fit();
 new MutationObserver(function(){setTimeout(fit,50)}).observe(document.documentElement,{attributes:true,attributeFilter:['class','style']});
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);})();</script>
+<script>(function(){document.querySelectorAll('a.tgo').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var c=document.getElementById(a.getAttribute('data-pc'));if(!c)return;var r=c.getBoundingClientRect();window.scrollTo({top:window.pageYOffset+r.top-(window.innerWidth<=760?70:96),behavior:'smooth'});setTimeout(function(){if(!c.classList.contains('on')){c.classList.add('on');c.setAttribute('aria-pressed','true')}c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash')},750)},true)})})();</script>
 </body>
 </html>
