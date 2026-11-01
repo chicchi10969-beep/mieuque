@@ -2765,9 +2765,9 @@ setTimeout(function(){setInterval(function(){im[i].classList.remove('on');if(d[i
 </script>
 <script>
 (function(){var bs=document.querySelectorAll('.fs button');
-function set(k){document.body.classList.remove('fs-s','fs-l');if(k!=='m')document.body.classList.add('fs-'+k);bs.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-fs')===k?'true':'false');});try{localStorage.setItem('mk-fs3',k);}catch(e){}}
+function set(k){document.body.classList.remove('fs-s','fs-l');if(k!=='m')document.body.classList.add('fs-'+k);bs.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-fs')===k?'true':'false');});try{localStorage.setItem('mk-fs4',k);}catch(e){}}
 bs.forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-fs'));});});
-var v=null;try{v=localStorage.getItem('mk-fs3');}catch(e){}set(v||'l');})();
+var v=null;try{v=localStorage.getItem('mk-fs4');}catch(e){}set(v||'m');})();
 </script>
 <script>
 (function(){var hd=document.querySelector('.hd'),b=document.querySelector('.menubtn');if(!b)return;
