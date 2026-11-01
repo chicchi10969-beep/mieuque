@@ -1954,6 +1954,46 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
 .pcard.dg .pcprice small .nwk2{display:inline-block}
 
 .pchg .nwk2,.lshift .nwk2{display:inline-block}
+
+/* award band: 2026-11-01 */
+.award{background:radial-gradient(ellipse at 50% 0%,#FFFDF7,#F6EEDD 70%);padding:clamp(28px,4vw,48px) 16px clamp(24px,3vw,36px);border-top:1px solid #E6D6B0}
+.awin{max-width:980px;margin:0 auto}
+.awtop{display:flex;align-items:center;justify-content:center;gap:clamp(4px,2vw,24px)}
+.awl{width:clamp(56px,9vw,110px);height:auto;flex:none;filter:drop-shadow(0 2px 2px rgba(120,90,30,.18))}
+.awc{text-align:center}
+.awk{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 4px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(14px,1.6vw,19px);letter-spacing:.12em;color:#8C6D2C}
+.awk i{display:block;width:clamp(30px,7vw,110px);height:5px;border-top:1px solid #C9A961;border-bottom:1px solid #C9A961}
+.awh{margin:0;font-family:var(--mincho);font-weight:700;font-size:clamp(36px,6.4vw,76px);letter-spacing:.06em;line-height:1.15;color:#1F2A44}
+.awh b{background:linear-gradient(100deg,#9A7A3C,#D9BF82 40%,#F1E2B6 55%,#B8964F);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.12em;margin-left:.06em}
+.awh .nwk2,.aws .nwk2{display:inline-block}
+.aws{margin:8px 0 0;font-size:clamp(13px,1.4vw,16px);font-weight:600;color:#3A322B;letter-spacing:.06em}
+.awb{list-style:none;margin:clamp(22px,3vw,34px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2vw,28px)}
+.awb li{text-align:center}
+.awr{margin:0 0 10px;position:relative;height:40px}
+.awr span{display:flex;align-items:center;justify-content:center;height:100%;background:#1F2A44;color:#F4ECDC;font-weight:700;letter-spacing:.18em;font-size:clamp(13px,1.4vw,16px);clip-path:polygon(0 0,100% 0,94% 50%,100% 100%,0 100%,6% 50%);box-shadow:inset 0 -2px 0 #C9A961}
+.awn{margin:0;font-family:var(--mincho);font-weight:700;font-size:clamp(22px,3vw,36px);line-height:1.25;letter-spacing:.04em;background:linear-gradient(100deg,#8C6D2C,#C9A961 45%,#8C6D2C);-webkit-background-clip:text;background-clip:text;color:transparent}
+.awn b{font-size:1.35em}
+.awn br{display:none}
+.awm{margin:6px 0 0;font-size:clamp(11px,1.15vw,13.5px);font-weight:600;color:#463F3A;line-height:1.6}
+.awnote{margin:18px 0 0;text-align:center;font-size:11.5px;color:#7A6A55;line-height:1.7}
+@media (max-width:760px){
+ .awtop{gap:2px}.awl{width:48px}
+ .awk i{width:22px}
+ .awh{font-size:31px}
+ .awb{gap:6px}
+ .awr{height:30px}.awr span{font-size:11px;letter-spacing:.06em}
+ .awn{font-size:17px}.awn br{display:inline}
+ .awm{font-size:10px;letter-spacing:0}
+ .awnote{font-size:10px}
+}
+
+.awm .nwk2{display:inline-block}
+.awl{width:clamp(52px,7vw,90px) !important}
+@media (max-width:760px){.awl{width:40px !important}}
+
+.awn{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;min-height:1.7em;line-height:1.2 !important}
+.awn b{line-height:1}
+@media (max-width:760px){.awn{min-height:2.6em;flex-direction:column}}
 </style>
 </head>
 <body>
@@ -2017,6 +2057,26 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
   <button type="button" class="ctrl" id="replay" hidden>もう一度みる</button>
 </section>
 
+
+<section class="award" aria-label="ミュークの実績">
+  <div class="awin">
+    <div class="awtop">
+      <svg class="awl" viewBox="20 10 130 250" aria-hidden="true"><defs><linearGradient id="awg0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9884A"/><stop offset=".5" stop-color="#E3CB8E"/><stop offset="1" stop-color="#9A7A3C"/></linearGradient></defs><g><path d="M131.9 232.4 A104 104 0 0 1 128.4 28.3" fill="none" stroke="url(#awg0)" stroke-width="2.6" stroke-linecap="round"/><g fill="url(#awg0)"><ellipse cx="120.8" cy="239.1" rx="5.2" ry="12.5" transform="rotate(235.0 120.8 239.1)"/><ellipse cx="125.4" cy="221.8" rx="5.2" ry="12.5" transform="rotate(155.0 125.4 221.8)"/><ellipse cx="93.5" cy="227.9" rx="5.0" ry="12.1" transform="rotate(250.0 93.5 227.9)"/><ellipse cx="102.5" cy="212.3" rx="5.0" ry="12.1" transform="rotate(170.0 102.5 212.3)"/><ellipse cx="70.1" cy="209.9" rx="4.9" ry="11.8" transform="rotate(265.0 70.1 209.9)"/><ellipse cx="82.8" cy="197.2" rx="4.9" ry="11.8" transform="rotate(185.0 82.8 197.2)"/><ellipse cx="52.1" cy="186.5" rx="4.7" ry="11.4" transform="rotate(280.0 52.1 186.5)"/><ellipse cx="67.7" cy="177.5" rx="4.7" ry="11.4" transform="rotate(200.0 67.7 177.5)"/><ellipse cx="40.9" cy="159.2" rx="4.6" ry="11.0" transform="rotate(295.0 40.9 159.2)"/><ellipse cx="58.2" cy="154.6" rx="4.6" ry="11.0" transform="rotate(215.0 58.2 154.6)"/><ellipse cx="37.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(310.0 37.0 130.0)"/><ellipse cx="55.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(230.0 55.0 130.0)"/><ellipse cx="40.9" cy="100.8" rx="4.3" ry="10.2" transform="rotate(325.0 40.9 100.8)"/><ellipse cx="58.2" cy="105.4" rx="4.3" ry="10.2" transform="rotate(245.0 58.2 105.4)"/><ellipse cx="52.1" cy="73.5" rx="4.1" ry="9.9" transform="rotate(340.0 52.1 73.5)"/><ellipse cx="67.7" cy="82.5" rx="4.1" ry="9.9" transform="rotate(260.0 67.7 82.5)"/><ellipse cx="70.1" cy="50.1" rx="4.0" ry="9.5" transform="rotate(355.0 70.1 50.1)"/><ellipse cx="82.8" cy="62.8" rx="4.0" ry="9.5" transform="rotate(275.0 82.8 62.8)"/><ellipse cx="93.5" cy="32.1" rx="3.8" ry="9.1" transform="rotate(370.0 93.5 32.1)"/><ellipse cx="102.5" cy="47.7" rx="3.8" ry="9.1" transform="rotate(290.0 102.5 47.7)"/><ellipse cx="120.8" cy="20.9" rx="3.6" ry="8.8" transform="rotate(385.0 120.8 20.9)"/><ellipse cx="125.4" cy="38.2" rx="3.6" ry="8.8" transform="rotate(305.0 125.4 38.2)"/><ellipse cx="128.4" cy="20.3" rx="4.6" ry="12" transform="rotate(-12 128.4 20.3)"/></g></g></svg>
+      <div class="awc">
+        <p class="awk"><i></i><span>Medical Partnership</span><i></i></p>
+        <p class="awh"><span class="nwk2">医療機関と</span><b class="nwk2">提携</b></p>
+        <p class="aws"><span class="nwk2">クリニックのリハビリ室で、</span><span class="nwk2">患者さまへの施術を</span><span class="nwk2">担当しています</span></p>
+      </div>
+      <svg class="awl" viewBox="20 10 130 250" aria-hidden="true"><defs><linearGradient id="awg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9884A"/><stop offset=".5" stop-color="#E3CB8E"/><stop offset="1" stop-color="#9A7A3C"/></linearGradient></defs><g transform="translate(150 0) scale(-1 1)"><path d="M131.9 232.4 A104 104 0 0 1 128.4 28.3" fill="none" stroke="url(#awg1)" stroke-width="2.6" stroke-linecap="round"/><g fill="url(#awg1)"><ellipse cx="120.8" cy="239.1" rx="5.2" ry="12.5" transform="rotate(235.0 120.8 239.1)"/><ellipse cx="125.4" cy="221.8" rx="5.2" ry="12.5" transform="rotate(155.0 125.4 221.8)"/><ellipse cx="93.5" cy="227.9" rx="5.0" ry="12.1" transform="rotate(250.0 93.5 227.9)"/><ellipse cx="102.5" cy="212.3" rx="5.0" ry="12.1" transform="rotate(170.0 102.5 212.3)"/><ellipse cx="70.1" cy="209.9" rx="4.9" ry="11.8" transform="rotate(265.0 70.1 209.9)"/><ellipse cx="82.8" cy="197.2" rx="4.9" ry="11.8" transform="rotate(185.0 82.8 197.2)"/><ellipse cx="52.1" cy="186.5" rx="4.7" ry="11.4" transform="rotate(280.0 52.1 186.5)"/><ellipse cx="67.7" cy="177.5" rx="4.7" ry="11.4" transform="rotate(200.0 67.7 177.5)"/><ellipse cx="40.9" cy="159.2" rx="4.6" ry="11.0" transform="rotate(295.0 40.9 159.2)"/><ellipse cx="58.2" cy="154.6" rx="4.6" ry="11.0" transform="rotate(215.0 58.2 154.6)"/><ellipse cx="37.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(310.0 37.0 130.0)"/><ellipse cx="55.0" cy="130.0" rx="4.4" ry="10.6" transform="rotate(230.0 55.0 130.0)"/><ellipse cx="40.9" cy="100.8" rx="4.3" ry="10.2" transform="rotate(325.0 40.9 100.8)"/><ellipse cx="58.2" cy="105.4" rx="4.3" ry="10.2" transform="rotate(245.0 58.2 105.4)"/><ellipse cx="52.1" cy="73.5" rx="4.1" ry="9.9" transform="rotate(340.0 52.1 73.5)"/><ellipse cx="67.7" cy="82.5" rx="4.1" ry="9.9" transform="rotate(260.0 67.7 82.5)"/><ellipse cx="70.1" cy="50.1" rx="4.0" ry="9.5" transform="rotate(355.0 70.1 50.1)"/><ellipse cx="82.8" cy="62.8" rx="4.0" ry="9.5" transform="rotate(275.0 82.8 62.8)"/><ellipse cx="93.5" cy="32.1" rx="3.8" ry="9.1" transform="rotate(370.0 93.5 32.1)"/><ellipse cx="102.5" cy="47.7" rx="3.8" ry="9.1" transform="rotate(290.0 102.5 47.7)"/><ellipse cx="120.8" cy="20.9" rx="3.6" ry="8.8" transform="rotate(385.0 120.8 20.9)"/><ellipse cx="125.4" cy="38.2" rx="3.6" ry="8.8" transform="rotate(305.0 125.4 38.2)"/><ellipse cx="128.4" cy="20.3" rx="4.6" ry="12" transform="rotate(-12 128.4 20.3)"/></g></g></svg>
+    </div>
+    <ul class="awb">
+      <li><p class="awr"><span>アスリート</span></p><p class="awn">元 柔道<br>日本代表</p><p class="awm"><span class="nwk2">シドニーオリンピック</span><span class="nwk2">代表候補</span></p></li>
+      <li><p class="awr"><span>講師</span></p><p class="awn"><b>1,000</b>人以上</p><p class="awm"><span class="nwk2">の受講生の中から</span><span class="nwk2">講師に抜てき</span></p></li>
+      <li><p class="awr"><span>国家資格</span></p><p class="awn">柔道整復師</p><p class="awm"><span class="nwk2">国家資格をもつ</span><span class="nwk2">スタッフが在籍</span></p></li>
+    </ul>
+    <p class="awnote">※ 提携先：大阪府泉佐野市 ひがしの耳鼻咽喉科（月2回・リハビリ室にて出張施術）　※ 講師：元 整体技術塾</p>
+  </div>
+</section>
 <div class="navybar navysep" aria-hidden="true"></div>
 <section class="sec wan" data-en="101 Dogs" id="wan101" aria-labelledby="wan-h">
   <div class="wrap wgrid2">
@@ -2810,7 +2870,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 if(!window.Intl||!Intl.Segmenter)return;
 var seg=new Intl.Segmenter('ja',{granularity:'word'});
 var SEL='section p,section li,section dd,section dt,section summary,section h2,section h3,section th,section td,footer p,.fdog,.wdx p,.kids2';
-var SKIP='.clink,.pcard,.nwk2,.tfl,.tfn2,.tf-title,.tf-kicker,.tf-catch,.stage,.hd,.nsbig,.nsplate,.topcopy,script,style,svg,button,.nw,.nw2,.nwh,.nwk,.tx';
+var SKIP='.award,.clink,.pcard,.nwk2,.tfl,.tfn2,.tf-title,.tf-kicker,.tf-catch,.stage,.hd,.nsbig,.nsplate,.topcopy,script,style,svg,button,.nw,.nw2,.nwh,.nwk,.tx';
 var END=/[、。！？」）・…]$|^(を|が|は|に|で|と|も|へ|や|か|の|て|して|から|まで|より|には|では|とも|にも|ても|ので|けど|など|として|について|ながら|ように)$/;
 var NOSTART=/^[、。！？」）ーっゃゅょァィゥェォッャュョ・…らりるれろんずぬ]/;
 var HIRA=/[぀-ゟ]$/,KATA=/[゠-ヿ]$/,KANJI0=/^[一-鿿]/,KK0=/^[一-鿿゠-ヿ「（]/;
