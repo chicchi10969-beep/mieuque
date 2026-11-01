@@ -2029,7 +2029,20 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
 .tstat a.tgo,.tstat a.tgo i{white-space:nowrap !important;flex:none}
 @media (max-width:760px){.tstat a.tgo i{padding:2px 6px}.team .tstat li span{min-width:0}}
 
-@media (max-width:760px){.team .tstat li{flex-direction:column !important;align-items:flex-start !important;gap:4px !important}.team .tstat li span{white-space:nowrap}}
+
+@media (max-width:760px){
+ .team .tstat li{flex-direction:row !important;justify-content:space-between !important;align-items:center !important;gap:4px !important}
+ .team .tstat li>span{white-space:nowrap;font-size:10.5px !important;letter-spacing:0 !important}
+ .team .tstat li>span small{font-size:9px}
+ .team .tstat li>span .tlu{width:14px !important;height:auto}
+ .tstat a.tgo{font-size:10px !important;padding:2px 3px 2px 7px !important;gap:4px !important;letter-spacing:0 !important}
+ .tstat a.tgo i{font-size:9.5px !important;padding:2px 6px !important}
+ .tgx{display:none}
+}
+
+@media (max-width:760px){.team .tstat li>span{flex:none}.tstat a.tgo{flex:none}.tstat a.tgo i{padding:2px 7px !important}}
+
+@media (max-width:340px){.team .tstat li>span .tlu{display:none}.team .tstat li>span{font-size:10px !important}.team .tstat li>span small{font-size:8.5px}}
 </style>
 </head>
 <body>
@@ -2177,7 +2190,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
           <ul class="tcv"><li>シドニーオリンピック代表候補</li><li>元 整体技術塾 講師</li><li>ニューロンメディカルセラピスト</li></ul>
           <p class="tname"><b>鳥居 美紀</b><small>とりい みき</small></p>
           <p class="tline">痛みの奥にある、<br>その人の心まで見る。</p>
-          <ul class="tstat"><li><span>人の整体</span><a class="ok tgo" href="#pc-daily" data-pc="pc-daily">受付中<i>料金を見る →</i></a></li></ul>
+          <ul class="tstat"><li><span>人の整体</span><a class="ok tgo" href="#pc-daily" data-pc="pc-daily">受付中<i><span class="tgx">料金を見る </span>→</i></a></li></ul>
         </div>
       </article>
       <article class="tcard" id="t-kosuke">
@@ -2188,7 +2201,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
           <ul class="tcv"><li>国家資格 柔道整復師<small>（人の身体の国家資格）</small></li><li>ナチュラリゼーション認定トレーナー</li><li>ニューロンメディカルセラピスト</li></ul>
           <p class="tname"><b>竹元 晃嗣</b><small>たけもと こうすけ</small></p>
           <p class="tline"><span class="nwk2">研ぎ澄まされた、</span><span class="nwk2">繊細な手技と見る目。</span><span class="tlpc"><br><span class="nwk2">人の身体のプロが、</span><br><span class="nwk2">わんちゃんの身体も</span><span class="nwk2">丁寧に診ます。</span><br><span class="nwk2">人の整体では、</span><br><span class="nwk2">症状の重い方を</span><span class="nwk2">担当しています。</span></span></p>
-          <ul class="tstat"><li><span>わんちゃん整体<img class="tlu" data-lulu alt=""></span><a class="ok tgo" href="#pc-dog" data-pc="pc-dog">受付中<i>料金を見る →</i></a></li><li><span>人の整体<small>プレミアム</small></span><a class="ok tgo" href="#pc-prem" data-pc="pc-prem">受付中<i>料金を見る →</i></a></li></ul>
+          <ul class="tstat"><li><span>わんちゃん整体<img class="tlu" data-lulu alt=""></span><a class="ok tgo" href="#pc-dog" data-pc="pc-dog">受付中<i><span class="tgx">料金を見る </span>→</i></a></li><li><span>人の整体<small>プレミアム</small></span><a class="ok tgo" href="#pc-prem" data-pc="pc-prem">受付中<i><span class="tgx">料金を見る </span>→</i></a></li></ul>
         </div>
       </article>
       <article class="tcard" id="t-miwa">
@@ -2199,7 +2212,7 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
           <ul class="tcv"><li>国家資格 保育士</li><li>ニューロンメディカルセラピスト</li></ul>
           <p class="tname"><b>山元 美和</b><small>やまもと みわ</small></p>
           <p class="tline">はじめての方も、<br>安心してご相談ください。</p>
-          <ul class="tstat"><li><span>人の整体</span><a class="ok tgo" href="#pc-daily" data-pc="pc-daily">受付中<i>料金を見る →</i></a></li></ul>
+          <ul class="tstat"><li><span>人の整体</span><a class="ok tgo" href="#pc-daily" data-pc="pc-daily">受付中<i><span class="tgx">料金を見る </span>→</i></a></li></ul>
           <p class="kids2"><span class="nwk">お子さま連れの</span><span class="nwk">ママも大歓迎です</span><small>（要予約）</small></p>
         </div>
       </article>
