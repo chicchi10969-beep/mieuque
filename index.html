@@ -2097,6 +2097,11 @@ li.ck.on::after{transform:translateY(-65%) rotate(45deg) scale(1)}
 .wm-nb{white-space:nowrap}
 .wm-map{display:block;width:100%;height:auto;margin:0 auto;overflow:visible}
 .wm-map a{cursor:pointer}
+.wm-hv{opacity:0;transform-box:fill-box;transform-origin:center}
+.wm-node:hover .wm-hv,.wm-node.tap .wm-hv{animation:wmTeke .5s ease-out forwards}
+.wm-node:hover .wm-star,.wm-node.tap .wm-star{animation:wmTeke .45s ease-out forwards,wmTw 1.2s ease-in-out .9s infinite alternate}
+@keyframes wmTeke{0%{opacity:0;transform:scale(.3)}60%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
+@keyframes wmTw{from{opacity:1}to{opacity:.45}}
 .wm-map a:hover .wm-c{filter:brightness(1.03)}
 .wm-ig{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:6px 0 14px}
 .wm-ico{display:inline-block;height:17px;width:auto;vertical-align:-3px;margin:0 2px 0 3px}
@@ -2152,6 +2157,10 @@ function node(k){var e=WM_DATA.entrances[k],p=pos[k],x=p[0],y=p[1],here=(k===pag
   var n=e.members.length,fs=n>=3?(tri?30:34):(n==2?40:46),gap=4,tw=n*fs+(n-1)*gap,fx=x-tw/2,fy=y-24-fs/2;
   function face(m,cx,cy,d){var id="wmc"+(uid++);return '<clipPath id="'+id+'"><circle cx="'+cx+'" cy="'+cy+'" r="'+(d/2)+'"/></clipPath><circle cx="'+cx+'" cy="'+cy+'" r="'+(d/2+1.5)+'" fill="#fff" stroke="'+e.color[1]+'" stroke-width=".8"/><image href="'+IMG[m+"_face"]+'" x="'+(cx-d/2)+'" y="'+(cy-d/2)+'" width="'+d+'" height="'+d+'" clip-path="url(#'+id+')"><title>'+esc(WM_DATA.members[m])+'</title></image>';}
   s+='<circle class="wm-c" cx="'+x+'" cy="'+y+'" r="'+R+'" fill="'+e.color[0]+'" stroke="'+e.color[1]+'" stroke-width="1.5"/>';
+  if(k==="lulu"&&!here){var np2=26;for(var j=0;j<np2;j++){var a2=-Math.PI/2+0.32+j*(2*Math.PI-0.64)/(np2-1),r2=R+9+(j%2?2.6:-2.6);
+      s+='<g transform="translate('+(x+r2*Math.cos(a2)).toFixed(1)+' '+(y+r2*Math.sin(a2)).toFixed(1)+') rotate('+(a2*180/Math.PI+180).toFixed(0)+')"><use href="#wmPaw" class="wm-hv" style="animation-delay:'+(j*0.05).toFixed(2)+'s" x="-4" y="-4" width="8" height="8"/></g>';}}
+  if(k==="cinderella"){var ns=20;for(var j=0;j<ns;j++){var a3=-Math.PI/2+j*2*Math.PI/ns,r3=R+(here?13:9),sz=(j%3===0)?11:7;
+      s+='<g transform="translate('+(x+r3*Math.cos(a3)).toFixed(1)+' '+(y+r3*Math.sin(a3)).toFixed(1)+')"><use href="#wmStar" class="wm-hv wm-star" style="animation-delay:'+(j*0.05).toFixed(2)+'s" x="'+(-sz/2)+'" y="'+(-sz/2)+'" width="'+sz+'" height="'+sz+'"/></g>';}}
   if(here){s+='<circle class="wm-glow" cx="'+x+'" cy="'+y+'" r="'+(R+1)+'" fill="none" stroke="#f3dfa6" stroke-width="7" filter="url(#wmBlur)"/>';
     s+='<circle cx="'+x+'" cy="'+y+'" r="'+(R+1)+'" fill="none" stroke="url(#wmGold)" stroke-width="2.6"/>';
     if(k==="lulu"){var np=26;for(var i=0;i<np;i++){var a=-Math.PI/2+0.32+i*(2*Math.PI-0.64)/(np-1),rr=R+10+(i%2?2.6:-2.6),px=x+rr*Math.cos(a),py=y+rr*Math.sin(a),deg=a*180/Math.PI+180;
@@ -2170,11 +2179,11 @@ function node(k){var e=WM_DATA.entrances[k],p=pos[k],x=p[0],y=p[1],here=(k===pag
   var py=y+R+12+Math.max(1,lines.length)*13;
   if(e.lp&&!here){s+='<rect x="'+(x-40)+'" y="'+py+'" width="80" height="20" rx="10" fill="#3b3431"/><text x="'+x+'" y="'+(py+10)+'" text-anchor="middle" dominant-baseline="central" font-size="10.5" fill="#fff" letter-spacing="1">見てみる ▸</text>';
     s='<a href="'+esc(e.lp)+'" target="_blank" rel="noopener" aria-label="'+esc(e.title)+'のページを見る">'+s+'</a>';}
-  return s;}
+  return '<g class="wm-node">'+s+'</g>';}
 var arr="";
 if(tri){arr='<path d="M130 158 Q116 180 120 200" /><path d="M230 158 Q244 180 240 200" /><path d="M154 262 L206 262" marker-start="url(#wmAr)"/>';}
 else{arr='<path d="M142 56 Q180 22 218 56" /><path d="M218 168 Q180 202 142 168" />';}
-var svg='<svg class="wm-map" viewBox="0 0 '+W+' '+H+'" style="max-width:'+(tri?420:460)+'px" role="img" aria-label="ウェルネスミュークの入口とメンバー"><defs><linearGradient id="wmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e7bf"/><stop offset=".4" stop-color="#d4b06a"/><stop offset=".65" stop-color="#a8823f"/><stop offset="1" stop-color="#e9cf93"/></linearGradient><filter id="wmBlur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter><symbol id="wmPaw" viewBox="0 0 20 20"><ellipse cx="10" cy="13" rx="4.6" ry="3.8" fill="#c39a52"/><ellipse cx="4.2" cy="8" rx="1.9" ry="2.4" fill="#c39a52"/><ellipse cx="8" cy="4.6" rx="1.9" ry="2.5" fill="#c39a52"/><ellipse cx="12" cy="4.6" rx="1.9" ry="2.5" fill="#c39a52"/><ellipse cx="15.8" cy="8" rx="1.9" ry="2.4" fill="#c39a52"/></symbol><marker id="wmAr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#b08a4f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>';
+var svg='<svg class="wm-map" viewBox="0 0 '+W+' '+H+'" style="max-width:'+(tri?420:460)+'px" role="img" aria-label="ウェルネスミュークの入口とメンバー"><defs><linearGradient id="wmGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e7bf"/><stop offset=".4" stop-color="#d4b06a"/><stop offset=".65" stop-color="#a8823f"/><stop offset="1" stop-color="#e9cf93"/></linearGradient><filter id="wmBlur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter><symbol id="wmStar" viewBox="0 0 20 20"><path d="M10 0 C11 7 13 9 20 10 C13 11 11 13 10 20 C9 13 7 11 0 10 C7 9 9 7 10 0Z" fill="url(#wmGold)"/><circle cx="10" cy="10" r="2" fill="#fff8e6"/></symbol><symbol id="wmPaw" viewBox="0 0 20 20"><ellipse cx="10" cy="13" rx="4.6" ry="3.8" fill="#c39a52"/><ellipse cx="4.2" cy="8" rx="1.9" ry="2.4" fill="#c39a52"/><ellipse cx="8" cy="4.6" rx="1.9" ry="2.5" fill="#c39a52"/><ellipse cx="12" cy="4.6" rx="1.9" ry="2.5" fill="#c39a52"/><ellipse cx="15.8" cy="8" rx="1.9" ry="2.4" fill="#c39a52"/></symbol><marker id="wmAr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#b08a4f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>';
 svg+='<g fill="none" stroke="#b08a4f" stroke-width="1.4" stroke-dasharray="1 5" stroke-linecap="round" marker-end="url(#wmAr)">'+arr+'</g>';
 list.forEach(function(k){svg+=node(k)});svg+='</svg>';
 var h='<p class="wm-lead">ウェルネスミュークは、3人のセラピストが<span class="wm-nb">ひとつのチームで、</span><span class="wm-nb">いくつかの入口を</span><span class="wm-nb">もっています。</span><br><span class="wm-nb">どの入口からでも、</span><span class="wm-nb">同じなかまがお迎えします。</span></p>'+svg;
@@ -2184,6 +2193,7 @@ h+='<div class="wm-walk" aria-hidden="true"><figure class="lu"><img src="'+IMG.l
 ["miki","kosuke","miwa"].forEach(function(m){h+='<figure><img src="'+IMG[m+"_walk"]+'" alt=""><figcaption>'+esc(WM_DATA.members[m])+'</figcaption></figure>'});
 h+='</div><div class="wm-rsv"><span>ご予約・ご相談は<span class="wm-nb">どの入口も共通です</span></span><a href="'+esc(WM_DATA.line)+'" target="_blank" rel="noopener">公式LINEで相談</a></div>';
 document.getElementById("wm-panel").innerHTML=h;
+root.querySelectorAll(".wm-node").forEach(function(g){g.addEventListener("touchstart",function(){g.classList.add("tap");setTimeout(function(){g.classList.remove("tap")},1800)},{passive:true})});
 var tog=root.querySelector(".wm-tog");
 tog.addEventListener("click",function(){var o=root.classList.toggle("open");tog.setAttribute("aria-expanded",o?"true":"false")});
 function sh(){var d=document.documentElement.style;d.setProperty("--wm-h",root.offsetHeight+"px");d.setProperty("--wm-bar-h",root.querySelector(".wm-bar").offsetHeight+"px")}sh();if(window.ResizeObserver)new ResizeObserver(sh).observe(root);window.addEventListener("load",sh);
